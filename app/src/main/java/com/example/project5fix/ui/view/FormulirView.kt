@@ -123,16 +123,3 @@ fun LatihanInput(
     }
 
 }
-@Composable
-fun TampilData(
-    Judul: String,
-    Isinya:String
-){
-    Row(modifier = Modifier.fillMaxWidth()
-        .padding(16.dp),
-        horizontalArrangement = Arrangement.SpaceBetween) {
-        Text(Judul, modifier = Modifier.weight(0.8f))
-        Text(":", modifier = Modifier.weight(0.2f))
-        Text(Isinya, modifier = Modifier.weight(2f))
-    }
-}
