@@ -16,6 +16,7 @@ import androidx.navigation.compose.NavHost
 
 import androidx.navigation.compose.rememberNavController
 import com.example.project5fix.model.DataJK
+import com.example.project5fix.ui.view.TampilMahasiswaView
 import com.example.project5fix.ui.viewmodel.MahasiswaViewModel
 
 enum class Halaman {
@@ -42,8 +43,15 @@ fun Navigasi(
                         isi -> konteks.resources.getString(isi)
                     },
                     oneClickButton = {
-
+                    viewModel.saveDataMahasiswa(it)
+                        navHost.navigate(Halaman.Data.name)
                     }
+                )
+            }
+            composable(route = Halaman.Data.name){
+                TampilMahasiswaView(
+                    mhs = uiState,
+                    navController = navHost
                 )
             }
         }
