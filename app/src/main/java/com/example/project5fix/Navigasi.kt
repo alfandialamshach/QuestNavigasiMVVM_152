@@ -43,7 +43,7 @@ fun Navigasi(
                     pilihanJk = DataJK.isiJk.map { id ->
                         LocalContext.current.getString(id)
                     },
-                    oneClickButton = {
+                    onClickButton = {
                         viewModel.saveDataMahasiswa(it)
                         navHost.navigate(Halaman.Data.name)
                     }
