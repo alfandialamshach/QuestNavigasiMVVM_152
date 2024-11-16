@@ -8,12 +8,14 @@ import androidx.compose.runtime.collectAsState
 
 
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 
 import androidx.navigation.compose.rememberNavController
+import com.example.project5fix.model.DataJK
 import com.example.project5fix.ui.viewmodel.MahasiswaViewModel
 
 enum class Halaman {
@@ -33,7 +35,17 @@ fun Navigasi(
             modifier = modifier.padding(isipadding),
             navController = navHost, startDestinantion = Halaman.Form.name
         ){
+            composable(Route = Halaman.Form.name){
+                val konteks = LocalContext.current
+                FormulirView(
+                    pilihanJk = DataJK.isiJk.map{
+                        isi -> konteks.resources.getString(isi)
+                    },
+                    oneClickButton = {
 
+                    }
+                )
+            }
         }
     }
 }
