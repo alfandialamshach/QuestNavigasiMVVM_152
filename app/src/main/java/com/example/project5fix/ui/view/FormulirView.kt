@@ -33,7 +33,7 @@ import androidx.compose.ui.unit.sp
 
 
 @Composable
-fun LatihanInput(
+fun FormulirView(
     modifier: Modifier = Modifier,
     pilihanJk:List<String>,
     onClickButton: (MutableList<String>) -> Unit

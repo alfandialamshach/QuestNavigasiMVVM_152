@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.example.project5fix"
-    compileSdk = 35
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.project5fix"
         minSdk = 32
-        targetSdk = 35
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -71,4 +71,6 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.6")
     //tambahan dependencis navigation
     implementation("androidx.navigation:navigation-compose:2.8.3")
+
+
 }
