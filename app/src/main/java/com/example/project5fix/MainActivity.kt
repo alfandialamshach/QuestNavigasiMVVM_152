@@ -20,8 +20,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             Project5fixTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                    Navigasi(
+
                         modifier = Modifier.padding(innerPadding)
                     )
                 }

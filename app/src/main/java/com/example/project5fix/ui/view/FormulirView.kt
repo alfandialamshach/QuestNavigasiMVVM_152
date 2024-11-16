@@ -63,6 +63,18 @@ fun FormulirView(
                 Text("Masukkan Nama Anda")
             }
         )
+        TextField(
+            value = NIM,
+            onValueChange = {NIM = it},
+            modifier = Modifier.fillMaxWidth().padding(5.dp),
+            label = {
+                Text("NIM")
+            },
+            placeholder = {
+                Text("Masukkan NIM Anda")
+            },
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
+        )
         Row {
             pilihanJk.forEach { selectedJK ->
                 Row (verticalAlignment = Alignment.CenterVertically){
